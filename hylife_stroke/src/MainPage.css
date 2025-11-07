@@ -7,9 +7,15 @@
 .main-page {
   min-height: 100vh;
   background-color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+}
+
+/* Thai text font */
+.thai-text {
+  font-family: 'Kanit', 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 /* Navigation */
@@ -175,6 +181,21 @@
 .placeholder-image {
   width: 100%;
   max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 400px;
+}
+
+.hero-logo-right {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 15px rgba(74, 144, 226, 0.2));
 }
 
 /* Features Section */
@@ -346,9 +367,13 @@
     justify-content: center;
   }
 
-  .hero-logo {
-    width: 80px;
-    height: 80px;
+  .hero-logo-right {
+    max-width: 250px;
+  }
+
+  .placeholder-image {
+    min-height: 300px;
+    padding: 1.5rem;
   }
 
   .hero-title {

@@ -23,11 +23,9 @@ const MainPage = () => {
       {/* Hero Section */}
       <section id="home" className="hero-section">
         <div className="hero-content">
-          <div className="hero-logo-container">
-            <img src="/StrokeSight.ico" alt="StrokeSight Logo" className="hero-logo" />
-          </div>
+          
           <h1 className="hero-title">StrokeSight</h1>
-          <p className="hero-subtitle">Advanced Stroke Detection & Monitoring System</p>
+          <p className="hero-subtitle thai-text">แพลตฟอร์มคัดกรองโรคหลอดเลือดสมองด้วยปัญญาประดิษฐ์</p>
           <p className="hero-description">
             Empowering healthcare professionals with real-time stroke detection and monitoring capabilities
             to save lives and improve patient outcomes.
@@ -39,12 +37,7 @@ const MainPage = () => {
         </div>
         <div className="hero-image">
           <div className="placeholder-image">
-            <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="300" fill="#f0f4f8" rx="10"/>
-              <path d="M200 100L250 150L200 200L150 150L200 100Z" fill="#4a90e2" opacity="0.3"/>
-              <circle cx="200" cy="150" r="60" stroke="#4a90e2" strokeWidth="3" fill="none"/>
-              <circle cx="200" cy="150" r="30" fill="#4a90e2" opacity="0.5"/>
-            </svg>
+            <img src="/StrokeSight.ico" alt="StrokeSight Logo" className="hero-logo-right" />
           </div>
         </div>
       </section>

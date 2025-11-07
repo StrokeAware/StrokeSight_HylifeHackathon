@@ -12,6 +12,9 @@ const FloatingActionButton = () => {
         <Link to="/arm-detection" className="fab-menu-button">
           Arm Detection
         </Link>
+        <Link to="/time-form" className="fab-menu-button">
+          Time Form
+        </Link>
       </div>
       <button className="fab-button" type="button">
         <span className="fab-icon">+</span>

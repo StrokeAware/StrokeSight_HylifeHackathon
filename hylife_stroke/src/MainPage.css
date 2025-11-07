@@ -115,7 +115,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #555;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -394,6 +394,29 @@
 
   .hero-buttons {
     justify-content: center;
+  }
+}
+
+.go-to-speech-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-family: 'Poppins', 'Kanit', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(74, 144, 226, 0.10);
+}
+
+.go-to-speech-btn:focus {
+  outline: 2px solid #357abd;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .go-to-speech-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
   }
 }
 

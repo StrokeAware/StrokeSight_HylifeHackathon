@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainPage.css';
+import { Link } from 'react-router-dom';
 
 const MainPage = () => {
   return (
@@ -31,6 +32,8 @@ const MainPage = () => {
             to save lives and improve patient outcomes.
           </p>
           <div className="hero-buttons">
+            <Link to="/history  " className="btn btn-primary go-to-speech-btn">Go History</Link>
+            <Link to="/speech  " className="btn btn-primary go-to-speech-btn">Go Speech</Link>
             <button className="btn btn-secondary">Learn More</button>
           </div>
         </div>

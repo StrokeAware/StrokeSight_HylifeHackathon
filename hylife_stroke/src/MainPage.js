@@ -34,6 +34,7 @@ const MainPage = () => {
           <div className="hero-buttons">
             <Link to="/history  " className="btn btn-primary go-to-speech-btn">Go History</Link>
             <Link to="/speech  " className="btn btn-primary go-to-speech-btn">Go Speech</Link>
+            <Link to="/personalinfo " className="btn btn-primary go-to-speech-btn">Go personalInfo</Link>
             <button className="btn btn-secondary">Learn More</button>
           </div>
         </div>

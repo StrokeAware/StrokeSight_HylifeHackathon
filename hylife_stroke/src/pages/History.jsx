@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./History.css";
+import { useNavigate } from "react-router-dom";
+import { db } from '../auth';
+import { doc, addDoc, collection } from 'firebase/firestore';
+import Swal from 'sweetalert2';
 
 function History() {
+  const navigate = useNavigate();
   const questions = [
     { id: "q-onset", text: "เริ่มมีอาการครั้งแรกเมื่อไหร่? (Onset time / Last known well)" },
     { id: "q-face-arm-speech", text: "มีหน้าเบี้ยว แขนอ่อนแรง หรือพูดไม่ชัดไหม?" },
@@ -44,6 +49,45 @@ function History() {
     (q) => q.none === true || q.value.trim() !== ""
   );
 
+  const currentPatientId = localStorage.getItem("currentPatientId");
+
+  const handleSaveHistory = async () => {
+    if (!allCompleted) return;
+    if (!currentPatientId) {
+      await Swal.fire({
+        title: "ไม่พบข้อมูลผู้ป่วย",
+        text: "กรุณาลงทะเบียนใหม่ หรือกรอกประวัติผู้ป่วยก่อนเข้าสู่หน้านี้",
+        icon: "error",
+        confirmButtonText: "ตกลง"
+      });
+      return;
+    }
+    const answersData = Object.fromEntries(
+      Object.entries(answers).map(([id, v]) => [id, { value: v.value, none: v.none }])
+    );
+    // Debug: log patient id and answers for troubleshooting
+    console.log("Saving for patient:", currentPatientId, answersData);
+    try {
+      await addDoc(collection(db, 'patients', currentPatientId, 'history_detail'), {
+        answers: answersData,
+        savedAt: new Date().toISOString()
+      });
+      await Swal.fire({
+        title: "บันทึกสำเร็จ",
+        icon: "success",
+        confirmButtonText: "ตกลง"
+      });
+      navigate("/mainpage");
+    } catch (err) {
+      await Swal.fire({
+        title: "เกิดข้อผิดพลาด",
+        text: err && err.message ? err.message : JSON.stringify(err),
+        icon: "error",
+        confirmButtonText: "ปิด"
+      });
+    }
+  };
+
   return (
     <div className="body-history">
       <div className="Header-text">ซักประวัติ</div>
@@ -82,8 +126,9 @@ function History() {
         <button
           className={`next-button ${allCompleted ? "active" : ""}`}
           disabled={!allCompleted}
+          onClick={handleSaveHistory}
         >
-          ถัดไป
+          บันทึก
         </button>
       </div>
     </div>

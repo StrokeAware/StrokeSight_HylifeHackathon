@@ -4,7 +4,6 @@ import PersonalInfo from './pages/personalInfo';
 import History from './pages/History';
 import MainPage from './MainPage';
 import Speech from './pages/Speech';
-import History from './pages/History';
 import TimeForm from './pages/TimeForm';
 import ArmDetection from './ArmDetection';
 import FloatingActionButton from './FloatingActionButton';

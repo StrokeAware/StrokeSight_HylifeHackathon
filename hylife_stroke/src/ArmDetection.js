@@ -5,7 +5,7 @@ import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 import './ArmDetection.css';
 
 const VISIBILITY_THRESHOLD = 0.4;
-const DETECTION_DURATION_SECONDS = 5;
+const DETECTION_DURATION_SECONDS = 15;
 const POSITIVE_RANGE = { min: 168, max: 180 };
 const NEGATIVE_RANGE = { min: -180, max: -168 };
 const LEFT_ARM_INDICES = [11, 13, 15];

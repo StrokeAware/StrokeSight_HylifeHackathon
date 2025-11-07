@@ -1,9 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import MainPage from './MainPage';
 
 function App() {
   return (
-    <h1>Black</h1>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </div>
   );
 }
 

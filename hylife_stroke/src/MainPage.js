@@ -31,7 +31,6 @@ const MainPage = () => {
             to save lives and improve patient outcomes.
           </p>
           <div className="hero-buttons">
-            <button className="btn btn-primary">Get Started</button>
             <button className="btn btn-secondary">Learn More</button>
           </div>
         </div>

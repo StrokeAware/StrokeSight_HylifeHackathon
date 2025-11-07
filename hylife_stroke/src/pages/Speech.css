@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .speech-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: 'Kanit', 'Poppins', sans-serif;
+  }
+  
+  .speech-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+  }
+  
+  .speech-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 2rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* Section Box Styles */
+  .section-box {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .section-number {
+    background: #4f46e5;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* ส่วนที่ 1: ประโยคเป้าหมาย */
+  .target-section {
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    border-color: #c7d2fe;
+  }
+  
+  .target-phrase {
+    font-size: 1.75rem;
+    color: #4f46e5;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px dashed #818cf8;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* ส่วนที่ 2: คำที่พูด */
+  .transcript-section {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-color: #fcd34d;
+    min-height: 8rem;
+  }
+  
+  .transcript-section .section-number {
+    background: #f59e0b;
+  }
+  
+  .transcript-text {
+    font-size: 1.5rem;
+    color: #92400e;
+    word-wrap: break-word;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px solid #fbbf24;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .transcript-placeholder {
+    color: #d97706;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.125rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* ส่วนที่ 3: ผลการตรวจสอบ */
+  .result-section {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-color: #d1d5db;
+    min-height: 10rem;
+  }
+  
+  .result-section .section-number {
+    background: #6b7280;
+  }
+  
+  .result-content {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .result-content.correct {
+    background: #dcfce7;
+    border: 3px solid #22c55e;
+  }
+  
+  .result-content.incorrect {
+    background: #fee2e2;
+    border: 3px solid #ef4444;
+  }
+  
+  .result-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: scaleIn 0.3s ease-out;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .result-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .result-content.correct .result-text {
+    color: #15803d;
+  }
+  
+  .result-content.incorrect .result-text {
+    color: #b91c1c;
+  }
+  
+  .result-hint {
+    color: #4b5563;
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .result-placeholder {
+    color: #9ca3af;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.125rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* Button Styles */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .speech-btn {
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-size: 1.25rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .speech-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-start {
+    background: #4f46e5;
+    color: white;
+  }
+  
+  .btn-start:hover {
+    background: #4338ca;
+  }
+  
+  .btn-stop {
+    background: #dc2626;
+    color: white;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .btn-stop:hover {
+    background: #b91c1c;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  /* Listening Indicator */
+  .listening-indicator {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .listening-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid #fca5a5;
+  }
+  
+  .pulse-dot {
+    margin-right: 0.5rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .listening-text {
+    font-weight: 600;
+    font-size: 1.125rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* Footer */
+  .speech-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .speech-card {
+      padding: 1.5rem;
+    }
+  
+    .speech-title {
+      font-size: 1.5rem;
+    }
+  
+    .target-phrase {
+      font-size: 1.25rem;
+    }
+  
+    .section-title {
+      font-size: 1rem;
+    }
+  
+    .section-number {
+      width: 1.75rem;
+      height: 1.75rem;
+      font-size: 1rem;
+    }
+  
+    .speech-btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  
+    .transcript-text {
+      font-size: 1.125rem;
+    }
+  
+    .result-text {
+      font-size: 1.5rem;
+    }
+  
+    .result-icon {
+      font-size: 3rem;
+    }
+  }
